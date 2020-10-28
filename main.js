@@ -24,6 +24,7 @@ const isHighPriority = function(element){
 
 
 
+
 /***********************
  * ITERATION FUNCTIONS *
  ***********************/
@@ -47,14 +48,30 @@ const priorities = function(arr) {
   return newArr;
 }
 
+const namesAndPriorities = function(arr){
+  // return names.map(arr)
+}
+// getTodoNames.map(namesAndPriorities)
 
-
-// const namesAndPriorities = function(elem){
-  
+// const justComplete = function(elem){
+//   const newArr = [];
+//   for(const new of elem){
+//     const result = !isComplete(new);
+//     newArr.push(result);
+//   }
+//   return newArr
 // }
 
-const justComplete = function(elem){
-  
+const justComplete = function(arr) {
+  const newArr = [];
+  for (const element of arr) {
+      const result = isComplete(element);
+      if(result === false){
+      newArr.push(result);
+      }
+  }
+
+  return newArr;
 }
 
 const priority2Only = function(elem){
