@@ -1,8 +1,21 @@
 /********************
  * HELPER FUNCTIONS *
  ********************/
+const getTodoName = function(elem){
+  return elem.text;
+}
 
+const getPriority = function(elem){
+  return elem.priority;
+}
 
+const isComplete = function(elem){
+  return elem.complete;
+}
+
+const isHighPriority = function(element){
+  return element.priority > 1;
+}
 
 
 
@@ -14,15 +27,47 @@
 /***********************
  * ITERATION FUNCTIONS *
  ***********************/
+const names = function(arr) {
+  const newArr = [];
+  for (const elem of arr) {
+      const result = getTodoName(elem);
+      newArr.push(result);
+  }
+
+  return newArr;
+}
+
+const priorities = function(arr) {
+  const newArr = [];
+  for (const element of arr) {
+      const result = getPriority(element);
+      newArr.push(result);
+  }
+
+  return newArr;
+}
 
 
 
+// const namesAndPriorities = function(elem){
+  
+// }
 
+const justComplete = function(elem){
+  
+}
 
+const priority2Only = function(elem){
+  
+}
 
+const priority1Only = function(elem){
+  
+}
 
-
-
+const justNotComplete = function(elem){
+  
+}
 
 
 
